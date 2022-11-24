@@ -5,8 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DI02_Tarea_Fernandez_Chacon_EnriqueOctavio"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="500" Width="800">
 
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="72*"/>
+            <ColumnDefinition Width="715*"/>
+        </Grid.ColumnDefinitions>
+        <Menu Height="25" Margin="0,0,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3">
+            <MenuItem Header="Reservas">
+                <MenuItem Header="Nuevo..." Click="MenuItem_Click_NuevaReserva"/>
+                <MenuItem Header="Salir" Click="MenuItem_Click_Salir"/>
+            </MenuItem>
+            <MenuItem Header="Ayuda">
+                <MenuItem Header="Acerca De..." Click="MenuItem_ClickAcercaDe" />
+            </MenuItem>
+        </Menu>
+        <DataGrid x:Name="dgReservas" Margin="0,25,0,0" AutoGenerateColumns="False" ItemsSource="{Binding}" Grid.ColumnSpan="4" RenderTransformOrigin="0.5,0.5" Height="361" VerticalAlignment="Top">
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.429"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-1.351"/>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
+        </DataGrid>
+        <Button Content="Reinciar Aplicacion" HorizontalAlignment="Left" Grid.Column="2" Margin="263,402,0,19" Click="ReiniciarContenido"/>
     </Grid>
+
+
 </Window>
