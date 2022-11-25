@@ -1,12 +1,17 @@
 ﻿using DI02_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Dominio;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
+using System.Linq;
 
 namespace DI02_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Negocio
 {
-    public class Reservas
+    public class Reservas : INotifyCollectionChanged
     {
         private ObservableCollection<Reserva> listado;
+        private int id = 1;
+
+        public event NotifyCollectionChangedEventHandler? CollectionChanged;
 
         public Reservas()
         {
@@ -17,9 +22,28 @@ namespace DI02_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Negocio
         {
             if (reserva != null)
             {
-                reserva.Id = listado.Count + 1;
+                reserva.Id = id++;
                 listado.Add(reserva);
             } 
+        }
+
+        public void BorrarReserva(int id)
+        {
+            Reserva reserva = listado.FirstOrDefault(r => r.Id == id);
+            if (reserva != null)
+            {
+                listado.Remove(reserva);
+            }
+        } 
+
+        public void ModificarReserva(Reserva reservaModificada)
+        {
+            if (reservaModificada != null)
+            {
+                Reserva reservaAModificar = listado.FirstOrDefault(r => r.Id == reservaModificada.Id);
+                int indice = listado.IndexOf(reservaAModificar);
+                listado[indice] = reservaModificada;
+            }
         }
 
         public ObservableCollection<Reserva> GetReservas()

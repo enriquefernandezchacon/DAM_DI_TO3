@@ -7,7 +7,8 @@ namespace DI02_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Negocio
 {
     public class Clientes
     {
-        private ObservableCollection<Cliente> listadoClientes;
+        public ObservableCollection<Cliente> listadoClientes;
+        private int id = 1;
 
         public Clientes()
         {
@@ -18,7 +19,7 @@ namespace DI02_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Negocio
         {
             if (cliente != null)
             {
-                cliente.Id = listadoClientes.Count + 1;
+                cliente.Id = id++;
                 listadoClientes.Add(cliente);
             }
         }

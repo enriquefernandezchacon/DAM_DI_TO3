@@ -5,14 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DI02_Tarea_Fernandez_Chacon_EnriqueOctavio"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800">
+        IsVisibleChanged="VisibilidadChange"
+        Title="Gestión de Reservas - Enrique Fernández 2ºDAM" Height="520" Width="800">
 
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="13*"/>
-            <ColumnDefinition Width="72*"/>
-            <ColumnDefinition Width="715*"/>
-        </Grid.ColumnDefinitions>
         <Menu Height="25" Margin="0,0,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3">
             <MenuItem Header="Reservas">
                 <MenuItem Header="Nuevo..." Click="MenuItem_Click_NuevaReserva"/>
@@ -22,7 +18,7 @@
                 <MenuItem Header="Acerca De..." Click="MenuItem_ClickAcercaDe" />
             </MenuItem>
         </Menu>
-        <DataGrid x:Name="dgReservas" Margin="0,25,0,0" AutoGenerateColumns="False" ItemsSource="{Binding}" Grid.ColumnSpan="4" RenderTransformOrigin="0.5,0.5" Height="361" VerticalAlignment="Top">
+        <DataGrid x:Name="dgReservas" Margin="0,25,0,0" AutoGenerateColumns="False" CanUserAddRows="false" ItemsSource="{Binding}" RenderTransformOrigin="0.5,0.5" Height="400" VerticalAlignment="Top">
             <DataGrid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -32,7 +28,9 @@
                 </TransformGroup>
             </DataGrid.RenderTransform>
         </DataGrid>
-        <Button Content="Reinciar Aplicacion" HorizontalAlignment="Left" Grid.Column="2" Margin="263,402,0,19" Click="ReiniciarContenido"/>
+        <Button Content="Reinciar Aplicacion" HorizontalAlignment="Left" Click="ReiniciarContenido" Width="120" Height="25" Margin="635,445,0,0" VerticalAlignment="Top"/>
+        <Button Content="Borrar Reserva" HorizontalAlignment="Left" Click="BorrarReserva_Click" Width="120" Height="25" Margin="28,445,0,0" VerticalAlignment="Top"/>
+        <Button Content="Modificar Reserva" HorizontalAlignment="Left" Click="ModificarReserva_Click" Width="120" Height="25" Margin="192,445,0,0" VerticalAlignment="Top"/>
     </Grid>
 
 

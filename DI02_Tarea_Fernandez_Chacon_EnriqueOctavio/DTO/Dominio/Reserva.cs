@@ -50,6 +50,11 @@ namespace DI02_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Dominio
             }
         }
 
+        public Reserva()
+        {
+
+        }
+
         public Reserva(Cliente cliente, DateTime fecha, TipoCita tipoCita, Boolean seguro)
         {
             Cliente = cliente;

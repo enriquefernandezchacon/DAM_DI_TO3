@@ -6,16 +6,16 @@
         xmlns:local="clr-namespace:DI02_Tarea_Fernandez_Chacon_EnriqueOctavio"
         mc:Ignorable="d"
         Closed="Window_Closed"
-        Title="DialogoCliente" Height="250" Width="250">
+        Title="Nuevo CLiente" Height="250" Width="270">
     <Grid Validation.Error="Validation_Error">
-        <Label Content="Nuevo Cliente" HorizontalAlignment="Left" Margin="68,16,0,0" VerticalAlignment="Top"/>
-        <Label Content="Nombre" HorizontalAlignment="Left" Margin="14,60,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TextBoxNombre" HorizontalAlignment="Left" Margin="100,64,0,0" VerticalAlignment="Top" Width="120" TextWrapping="Wrap" Text="{Binding Path=Nombre, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" SpellCheck.IsEnabled="True" LostFocus="TextBoxNombre_LostFocus"/>
-        <Label Content="Apellidos" HorizontalAlignment="Left" Margin="15,91,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TextBoxApellidos" HorizontalAlignment="Left" Margin="100,95,0,0" VerticalAlignment="Top" Width="120" TextWrapping="Wrap" Text="{Binding Path=Apellidos, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" SpellCheck.IsEnabled="True" LostFocus="TextBoxApellidos_LostFocus"/>
-        <Label Content="Telefono" HorizontalAlignment="Left" Margin="15,122,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TextBoxTelefono" HorizontalAlignment="Left" Margin="100,126,0,0" VerticalAlignment="Top" Width="120" TextWrapping="Wrap" Text="{Binding Path=Telefono, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" SpellCheck.IsEnabled="True" LostFocus="TextBoxTelefono_LostFocus"/>
-        <Button x:Name="btAceptar" Click="BTAceptarClick" Content="Aceptar" HorizontalAlignment="Left" Margin="58,181,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btCancelar" Click="BTCancelarClick" Content="Cancelar" HorizontalAlignment="Left" Margin="160,181,0,0" VerticalAlignment="Top"/>        
+        <Label Content="Nuevo Cliente" HorizontalAlignment="Left" Margin="65,14,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="11,58,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBoxNombre" HorizontalAlignment="Left" Margin="97,62,0,0" VerticalAlignment="Top" Width="120" TextWrapping="Wrap" Text="{Binding Path=Nombre, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" SpellCheck.IsEnabled="True" LostFocus="TextBoxNombre_LostFocus"/>
+        <Label Content="Apellidos" HorizontalAlignment="Left" Margin="12,89,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBoxApellidos" HorizontalAlignment="Left" Margin="97,93,0,0" VerticalAlignment="Top" Width="120" TextWrapping="Wrap" Text="{Binding Path=Apellidos, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" SpellCheck.IsEnabled="True" LostFocus="TextBoxApellidos_LostFocus"/>
+        <Label Content="Telefono" HorizontalAlignment="Left" Margin="12,120,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBoxTelefono" HorizontalAlignment="Left" Margin="97,124,0,0" VerticalAlignment="Top" Width="120" TextWrapping="Wrap" Text="{Binding Path=Telefono, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" SpellCheck.IsEnabled="True" LostFocus="TextBoxTelefono_LostFocus"/>
+        <Button x:Name="btAceptar" Click="BTAceptarClick" Content="Aceptar" HorizontalAlignment="Left" Margin="55,179,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btCancelar" Click="BTCancelarClick" Content="Cancelar" HorizontalAlignment="Left" Margin="157,179,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
