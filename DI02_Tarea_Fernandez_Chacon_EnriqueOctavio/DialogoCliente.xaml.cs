@@ -28,10 +28,15 @@ namespace DI02_Tarea_Fernandez_Chacon_EnriqueOctavio
         public DialogoCliente(Clientes clientes)
         {
             InitializeComponent();
+            //Creo el cliente
             cliente = new Cliente();
+            //Lo establezco como contexto
             this.DataContext = cliente;
+            //Asigno la logica de negocio
             this.clientes = clientes;
         }
+
+        //Metodo de validacion del boton
         private void Validation_Error(object sender, ValidationErrorEventArgs e)
         {
             if (e.Action == ValidationErrorEventAction.Added)
@@ -46,6 +51,7 @@ namespace DI02_Tarea_Fernandez_Chacon_EnriqueOctavio
 
         }
 
+        //No hago comprobación, pues si el botón esta activo, es que los campos son correctos
         private void BTAceptarClick(object sender, RoutedEventArgs e)
         {
             clientes.AgregarCliente(cliente);
@@ -57,11 +63,13 @@ namespace DI02_Tarea_Fernandez_Chacon_EnriqueOctavio
             this.Close();
         }
 
+        //Cuando se cierra la ventana, se muestra la ventana padre
         private void Window_Closed(object sender, EventArgs e)
         {
             this.Owner.Show();
         }
 
+        //Comprobacion del nombre
         private void TextBoxNombre_LostFocus(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(TextBoxNombre.Text))
@@ -69,20 +77,22 @@ namespace DI02_Tarea_Fernandez_Chacon_EnriqueOctavio
                 MessageBox.Show("Debes completar el campo nombre", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-
+        //Comprobacion de los apellidos
         private void TextBoxApellidos_LostFocus(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(TextBoxApellidos.Text))
             {
-                MessageBox.Show("Debes completar el campo aula", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Debes completar el campo apellido", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-
+        //Comprobacion de telefono
         private void TextBoxTelefono_LostFocus(object sender, RoutedEventArgs e)
         {
+            //Que no este vacío
             if (string.IsNullOrEmpty(TextBoxTelefono.Text))
             {
                 MessageBox.Show("Debes completar el campo telefono", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                //Que cumpla con el formato de un número
             } else if (!Regex.IsMatch(TextBoxTelefono.Text, "[6789]\\d{8}")) {
                 MessageBox.Show("El formato del campo telefono no es correcto", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }

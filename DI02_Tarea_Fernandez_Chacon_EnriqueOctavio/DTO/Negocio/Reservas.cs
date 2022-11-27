@@ -18,6 +18,7 @@ namespace DI02_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Negocio
             listado = new ObservableCollection<Reserva>();
         }
 
+        //Metodos de la lógica de negocio
         public void AgregarReserva(Reserva reserva)
         {
             if (reserva != null)
@@ -35,7 +36,8 @@ namespace DI02_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Negocio
                 listado.Remove(reserva);
             }
         } 
-
+        //Para modificar la reserva, reemplazo en la lista la reserva a modificar por un nuevo objeto del tipo Reserva
+        //con los nuevos datos
         public void ModificarReserva(Reserva reservaModificada)
         {
             if (reservaModificada != null)

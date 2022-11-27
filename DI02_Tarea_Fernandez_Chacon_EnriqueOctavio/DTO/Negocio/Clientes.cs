@@ -15,6 +15,7 @@ namespace DI02_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Negocio
             listadoClientes = new ObservableCollection<Cliente>();
         }
 
+        //Metodos de la lógica de negocio
         public void AgregarCliente(Cliente cliente)
         {
             if (cliente != null)

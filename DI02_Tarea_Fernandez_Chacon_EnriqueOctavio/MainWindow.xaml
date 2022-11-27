@@ -10,15 +10,15 @@
 
     <Grid>
         <Menu Height="25" Margin="0,0,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3">
-            <MenuItem Header="Reservas">
-                <MenuItem Header="Nuevo..." Click="MenuItem_Click_NuevaReserva"/>
-                <MenuItem Header="Salir" Click="MenuItem_Click_Salir"/>
+            <MenuItem Header="Reservas" ToolTip="Menú de reservas" >
+                <MenuItem Header="Nuevo..." ToolTip="Crear nueva reserva" Click="MenuItem_Click_NuevaReserva"/>
+                <MenuItem Header="Salir" Click="MenuItem_Click_Salir" ToolTip="Salir del programa" />
             </MenuItem>
-            <MenuItem Header="Ayuda">
-                <MenuItem Header="Acerca De..." Click="MenuItem_ClickAcercaDe" />
+            <MenuItem Header="Ayuda" ToolTip="Menú de ayuda" >
+                <MenuItem Header="Acerca De..." Click="MenuItem_ClickAcercaDe" ToolTip="Mostrar ventana con información de acerca de" />
             </MenuItem>
         </Menu>
-        <DataGrid x:Name="dgReservas" Margin="0,25,0,0" AutoGenerateColumns="False" CanUserAddRows="false" ItemsSource="{Binding}" RenderTransformOrigin="0.5,0.5" Height="400" VerticalAlignment="Top">
+        <DataGrid x:Name="dgReservas" ToolTip="Listado de reservas" Margin="0,25,0,0" AutoGenerateColumns="False" CanUserAddRows="false" ItemsSource="{Binding}" RenderTransformOrigin="0.5,0.5" Height="400" VerticalAlignment="Top">
             <DataGrid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -28,9 +28,9 @@
                 </TransformGroup>
             </DataGrid.RenderTransform>
         </DataGrid>
-        <Button Content="Reinciar Aplicacion" HorizontalAlignment="Left" Click="ReiniciarContenido" Width="120" Height="25" Margin="635,445,0,0" VerticalAlignment="Top"/>
-        <Button Content="Borrar Reserva" HorizontalAlignment="Left" Click="BorrarReserva_Click" Width="120" Height="25" Margin="28,445,0,0" VerticalAlignment="Top"/>
-        <Button Content="Modificar Reserva" HorizontalAlignment="Left" Click="ModificarReserva_Click" Width="120" Height="25" Margin="192,445,0,0" VerticalAlignment="Top"/>
+        <Button Content="Borrar Reserva" ToolTip="Borrar la reserva seleccionada" HorizontalAlignment="Left" Click="BorrarReserva_Click" Width="120" Height="25" Margin="28,445,0,0" VerticalAlignment="Top"/>
+        <Button Content="Modificar Reserva" ToolTip="Modificar la reserva seleccionad" HorizontalAlignment="Left" Click="ModificarReserva_Click" Width="120" Height="25" Margin="192,445,0,0" VerticalAlignment="Top"/>
+        <Button Content="Reinciar Aplicacion" ToolTip="Reiniciar los datos de la aplicación" HorizontalAlignment="Left" Click="ReiniciarContenido" Width="120" Height="25" Margin="635,445,0,0" VerticalAlignment="Top"/>
     </Grid>
 
 

@@ -23,9 +23,11 @@ namespace DI02_Tarea_Fernandez_Chacon_EnriqueOctavio
         public WindowAcercaDe()
         {
             InitializeComponent();
+            //Muestro la ventana en el centro
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
 
+        //Al cerrar esta ventana, se vuelve visible la ventana padre
         private void Window_Closed(object sender, EventArgs e)
         {
             this.Owner.Show();

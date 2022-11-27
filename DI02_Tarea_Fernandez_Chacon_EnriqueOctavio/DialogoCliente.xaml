@@ -10,12 +10,12 @@
     <Grid Validation.Error="Validation_Error">
         <Label Content="Nuevo Cliente" HorizontalAlignment="Left" Margin="65,14,0,0" VerticalAlignment="Top"/>
         <Label Content="Nombre" HorizontalAlignment="Left" Margin="11,58,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TextBoxNombre" HorizontalAlignment="Left" Margin="97,62,0,0" VerticalAlignment="Top" Width="120" TextWrapping="Wrap" Text="{Binding Path=Nombre, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" SpellCheck.IsEnabled="True" LostFocus="TextBoxNombre_LostFocus"/>
+        <TextBox x:Name="TextBoxNombre" ToolTip="Introduzca el nombre del cliente" HorizontalAlignment="Left" Margin="97,62,0,0" VerticalAlignment="Top" Width="120" TextWrapping="Wrap" Text="{Binding Path=Nombre, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" SpellCheck.IsEnabled="True" LostFocus="TextBoxNombre_LostFocus"/>
         <Label Content="Apellidos" HorizontalAlignment="Left" Margin="12,89,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TextBoxApellidos" HorizontalAlignment="Left" Margin="97,93,0,0" VerticalAlignment="Top" Width="120" TextWrapping="Wrap" Text="{Binding Path=Apellidos, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" SpellCheck.IsEnabled="True" LostFocus="TextBoxApellidos_LostFocus"/>
+        <TextBox x:Name="TextBoxApellidos" ToolTip="Introduzca los apellidos del cliente" HorizontalAlignment="Left" Margin="97,93,0,0" VerticalAlignment="Top" Width="120" TextWrapping="Wrap" Text="{Binding Path=Apellidos, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" SpellCheck.IsEnabled="True" LostFocus="TextBoxApellidos_LostFocus"/>
         <Label Content="Telefono" HorizontalAlignment="Left" Margin="12,120,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TextBoxTelefono" HorizontalAlignment="Left" Margin="97,124,0,0" VerticalAlignment="Top" Width="120" TextWrapping="Wrap" Text="{Binding Path=Telefono, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" SpellCheck.IsEnabled="True" LostFocus="TextBoxTelefono_LostFocus"/>
-        <Button x:Name="btAceptar" Click="BTAceptarClick" Content="Aceptar" HorizontalAlignment="Left" Margin="55,179,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btCancelar" Click="BTCancelarClick" Content="Cancelar" HorizontalAlignment="Left" Margin="157,179,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBoxTelefono" ToolTip="Introudzca el telefono del cliente" HorizontalAlignment="Left" Margin="97,124,0,0" VerticalAlignment="Top" Width="120" TextWrapping="Wrap" Text="{Binding Path=Telefono, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" SpellCheck.IsEnabled="True" LostFocus="TextBoxTelefono_LostFocus"/>
+        <Button x:Name="btAceptar" Click="BTAceptarClick" ToolTip="Crear un nuevo cliente" Content="Crear" HorizontalAlignment="Left" Margin="55,179,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btCancelar" Click="BTCancelarClick" ToolTip="Cancelar y salir" Content="Cancelar" HorizontalAlignment="Left" Margin="157,179,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
