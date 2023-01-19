@@ -17,7 +17,6 @@ namespace DI03_Tarea_Fernandez_Chacon_EnriqueOctavio.Componentes
         {
             get { return _dni; } 
             set {
-                EstadoBoton = value.Length > 7;
                 _dni = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Dni)));
             }
@@ -29,7 +28,7 @@ namespace DI03_Tarea_Fernandez_Chacon_EnriqueOctavio.Componentes
             get { return _estadoBoton; } 
             set {
                 _estadoBoton = value;
-                Console.WriteLine(EstadoBoton);
+                System.Diagnostics.Debug.WriteLine(EstadoBoton);
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(EstadoBoton)));
             } } 
 
@@ -66,7 +65,7 @@ namespace DI03_Tarea_Fernandez_Chacon_EnriqueOctavio.Componentes
 
         public void CheckDni(object sender, EventArgs e)
         {
-            EstadoBoton = TextBoxEntidad.Text.Length > 7;
+            EstadoBoton = TextBoxEntidad.Text.Length > 7 && TextBoxEntidad.Text.Length < 9;
         }
     }
 }
