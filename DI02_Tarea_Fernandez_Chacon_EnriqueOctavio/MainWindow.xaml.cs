@@ -1,5 +1,6 @@
 ﻿using DI02_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Dominio;
 using DI02_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Negocio;
+using DI02_Tarea_Fernandez_Chacon_EnriqueOctavio.Vistas.Clientes;
 using System;
 using System.Diagnostics.Eventing.Reader;
 using System.Windows;
@@ -101,6 +102,20 @@ namespace DI02_Tarea_Fernandez_Chacon_EnriqueOctavio
             //Oculto esta ventana y muestro la nueva
             this.Hide();
             windowAcercaDe.Show();
+        }
+
+        //Evento para el botón "Anadir Cliente..."
+        private void MenuItem_AnadirCliente(object sender, RoutedEventArgs e)
+        {
+            //Creo la ventana
+            WindowAnadirCliente windowAnadirCliente = new();
+            //Establezco el padre
+            windowAnadirCliente.Owner = this;
+            //Establezco el titulo
+            windowAnadirCliente.Title = "Añadir Cliente";
+            //Oculto esta ventana y muestro la nueva
+            this.Hide();
+            windowAnadirCliente.Show();
         }
 
         //Evento del botón reiniciar

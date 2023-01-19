@@ -14,6 +14,9 @@
                 <MenuItem Header="Nuevo..." ToolTip="Crear nueva reserva" Click="MenuItem_Click_NuevaReserva"/>
                 <MenuItem Header="Salir" Click="MenuItem_Click_Salir" ToolTip="Salir del programa" />
             </MenuItem>
+            <MenuItem Header="Clientes" ToolTip="Menú de clientes" >
+                <MenuItem Header="Anadir Cliente..." Click="MenuItem_AnadirCliente" ToolTip="Mostrar ventana para añadir un nuevo cliente" />
+            </MenuItem>
             <MenuItem Header="Ayuda" ToolTip="Menú de ayuda" >
                 <MenuItem Header="Acerca De..." Click="MenuItem_ClickAcercaDe" ToolTip="Mostrar ventana con información de acerca de" />
             </MenuItem>

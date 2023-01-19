@@ -1,0 +1,17 @@
+﻿<Window x:Class="DI02_Tarea_Fernandez_Chacon_EnriqueOctavio.Vistas.Clientes.WindowAnadirCliente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DI02_Tarea_Fernandez_Chacon_EnriqueOctavio.Vistas.Clientes"
+        xmlns:uc="clr-namespace:DI02_Tarea_Fernandez_Chacon_EnriqueOctavio.Componentes"
+        mc:Ignorable="d"
+        Title="WindowAnadirCliente" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <uc:CampoDni Grid.Row="0"/>
+        <TextBox x:Name="TextBoxTelefono" ToolTip="Introudzca el telefono del cliente" HorizontalAlignment="Left" Margin="97,124,0,0" VerticalAlignment="Top" Width="120" TextWrapping="Wrap" />
+    </Grid>
+</Window>

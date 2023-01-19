@@ -6,10 +6,10 @@ namespace DI02_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Dominio
 {
     public class Cliente : INotifyPropertyChanged, ICloneable, IDataErrorInfo
     {
-        public int Id { get; set; }
-        public string Nombre { get; set; }
-        public string Apellidos { get; set; }
-        public string Telefono { get; set; }
+        public int? Id { get; set; }
+        public string? Nombre { get; set; }
+        public string? Apellidos { get; set; }
+        public string? Telefono { get; set; }
 
         public string Error => throw new NotImplementedException();
 
@@ -46,16 +46,13 @@ namespace DI02_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Dominio
             }
         }
 
+        public Cliente() { }
+
         public Cliente(string nombre, string apellidos, string telefono)
         {
             Nombre = nombre;
             Apellidos = apellidos;
             Telefono = telefono;
-        }
-
-        public Cliente()
-        {
-
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;

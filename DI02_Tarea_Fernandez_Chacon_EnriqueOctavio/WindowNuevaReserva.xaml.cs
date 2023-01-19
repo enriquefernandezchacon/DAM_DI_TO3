@@ -139,7 +139,7 @@ namespace DI02_Tarea_Fernandez_Chacon_EnriqueOctavio
                 {
                     //Si todo es correcto, asigno la fecha y el valor de seleccionado en los radioButton referidos al seguro
                     reserva.Fecha = fecha;
-                    reserva.Seguro = (bool)rbSi.IsChecked;
+                    reserva.Seguro = (bool) rbSi.IsChecked;
                     //Llamo al metodo que corresponda
                     if (modificar)
                     {
