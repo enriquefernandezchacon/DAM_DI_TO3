@@ -1,13 +1,13 @@
-﻿using DI02_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Dominio;
-using DI02_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Negocio;
-using DI02_Tarea_Fernandez_Chacon_EnriqueOctavio.Vistas.Clientes;
+﻿using DI03_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Dominio;
+using DI03_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Negocio;
+using DI03_Tarea_Fernandez_Chacon_EnriqueOctavio.Vistas.Clientes;
 using System;
 using System.Diagnostics.Eventing.Reader;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 
-namespace DI02_Tarea_Fernandez_Chacon_EnriqueOctavio
+namespace DI03_Tarea_Fernandez_Chacon_EnriqueOctavio
 {
     public partial class MainWindow : Window
     {

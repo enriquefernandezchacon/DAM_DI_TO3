@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace DI02_Tarea_Fernandez_Chacon_EnriqueOctavio.Vistas.Clientes
+namespace DI03_Tarea_Fernandez_Chacon_EnriqueOctavio.Vistas.Clientes
 {
     /// <summary>
     /// Lógica de interacción para WindowAnadirCliente.xaml

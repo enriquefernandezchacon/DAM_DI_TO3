@@ -1,5 +1,5 @@
-﻿using DI02_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Dominio;
-using DI02_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Negocio;
+﻿using DI03_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Dominio;
+using DI03_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Negocio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace DI02_Tarea_Fernandez_Chacon_EnriqueOctavio
+namespace DI03_Tarea_Fernandez_Chacon_EnriqueOctavio
 {
     /// <summary>
     /// Lógica de interacción para DialogoCliente.xaml

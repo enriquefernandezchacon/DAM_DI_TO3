@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace DI02_Tarea_Fernandez_Chacon_EnriqueOctavio
+namespace DI03_Tarea_Fernandez_Chacon_EnriqueOctavio
 {
     /// <summary>
     /// Interaction logic for App.xaml

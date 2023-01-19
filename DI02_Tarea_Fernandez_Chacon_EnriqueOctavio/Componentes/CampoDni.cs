@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DI02_Tarea_Fernandez_Chacon_EnriqueOctavio.Componentes
+namespace DI03_Tarea_Fernandez_Chacon_EnriqueOctavio.Componentes
 {
     /// <summary>
     /// Lógica de interacción para UserControl1.xaml

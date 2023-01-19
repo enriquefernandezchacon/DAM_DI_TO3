@@ -1,10 +1,10 @@
-﻿using DI02_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Dominio;
+﻿using DI03_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Dominio;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.Linq;
 
-namespace DI02_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Negocio
+namespace DI03_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Negocio
 {
     public class Reservas : INotifyCollectionChanged
     {
