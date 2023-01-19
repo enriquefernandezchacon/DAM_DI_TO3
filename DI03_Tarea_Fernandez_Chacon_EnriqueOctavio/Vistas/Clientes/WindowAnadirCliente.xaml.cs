@@ -23,5 +23,10 @@ namespace DI03_Tarea_Fernandez_Chacon_EnriqueOctavio.Vistas.Clientes
         {
             InitializeComponent();
         }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            this.Owner.Show();
+        }
     }
 }

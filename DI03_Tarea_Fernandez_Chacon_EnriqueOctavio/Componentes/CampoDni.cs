@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace DI03_Tarea_Fernandez_Chacon_EnriqueOctavio.Componentes
 {
@@ -28,7 +29,6 @@ namespace DI03_Tarea_Fernandez_Chacon_EnriqueOctavio.Componentes
             get { return _estadoBoton; } 
             set {
                 _estadoBoton = value;
-                System.Diagnostics.Debug.WriteLine(EstadoBoton);
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(EstadoBoton)));
             } } 
 
@@ -37,6 +37,25 @@ namespace DI03_Tarea_Fernandez_Chacon_EnriqueOctavio.Componentes
             InitializeComponent();
             this.DataContext = this;
             EstadoBoton = Dni.Length > 7;
+        }
+
+        public void CalcularLetra(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                Dni = TextBoxEntidad.Text;
+                if (Dni.Length == 8)
+                {
+                    string[] control = { "T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E" };
+                    bool flag = Int32.TryParse(Dni, out var dni);
+                    if (flag)
+                    {
+                        LongitudMaxima = 9;
+                        Dni += control[dni % 23];
+                    }
+                }
+            }
+
         }
 
         public void CalcularLetra(object sender, EventArgs e)
