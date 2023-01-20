@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DI03_Tarea_Fernandez_Chacon_EnriqueOctavio.Vistas.Clientes"
         xmlns:uc="clr-namespace:DI03_Tarea_Fernandez_Chacon_EnriqueOctavio.Componentes"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Closed="Window_Closed"
         Title="WindowAnadirCliente" Height="450" Width="800">
@@ -33,11 +34,11 @@
         <TextBox x:Name="TextBoxTelefono" Width="200" Grid.Column="1" Grid.Row="2" Margin="20,0,0,0" Height="24"/>
         <Label x:Name="LabelMail" Content="Email" Grid.Column="0" Grid.Row="3" Margin="0,10,0,0"/>
         <TextBox x:Name="TextBoxMail" Width="200" Grid.Column="1" Grid.Row="3" Margin="20,0,0,0" Height="24"/>
-        <uc:CampoDni Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" Margin="0,10,0,0"/>
+        <uc:CampoDni x:Name="CustomDni" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" Margin="0,10,0,0"/>
         <Label x:Name="LabelDireccion" Content="Direccion" Grid.Column="0" Grid.Row="5" Margin="0,10,0,0"/>
         <TextBox x:Name="TextBoxDireccion" Width="200" Grid.Column="1" Grid.Row="5" Margin="20,0,0,0" Height="24"/>
         <Label x:Name="LabelFechaNacimiento" Content="Fecha de nacimiento" Grid.Column="0" Grid.Row="6" Margin="0,10,0,0"/>
-        <DatePicker x:Name="DatePickerFechaNacimiento" Width="200" Grid.Column="1" Grid.Row="6" Margin="20,0,0,0" Height="24"/>
+        <DatePicker x:Name="DatePickerFechaNacimiento" DisplayDateEnd="{x:Static sys:DateTime.Now}" SelectedDate="{x:Static sys:DateTime.Now}" Width="200" Grid.Column="1" Grid.Row="6" Margin="20,0,0,0" Height="24"/>
         <Button x:Name="BotonAceptar" Content="Añadir Cliente" Width="150" Grid.Column="1" Grid.Row="7" Margin="0,10,0,0" Click="AnadirCliente"/>
     </Grid>
 </Window>
