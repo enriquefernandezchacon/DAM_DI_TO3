@@ -16,7 +16,7 @@
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         <Label x:Name="LabelDni" ToolTip="Dni" Content="Dni" Grid.Column="0" Grid.Row="0"/>
-        <TextBox x:Name="TextBoxEntidad" ToolTip="Campo para introducir el Dni" Text="{Binding .Dni}" MaxLength="{Binding .LongitudMaxima}" GotFocus="QuitarLetra" TextChanged="CheckDni" KeyDown="CalcularLetra"  Width="200" Grid.Column="1" Grid.Row="0" Margin="230,0,0,0"/>
-        <Button x:Name="BotonDni" ToolTip="Al pulsar en este botón se calculará la letra del Dni" Content="Calcular letra" Grid.Column="2" Grid.Row="0" Margin="20,0,0,0" Width="100" Click="CalcularLetra" IsEnabled="{Binding .EstadoBoton}"/>
+        <TextBox x:Name="TextBoxEntidad" ToolTip="Campo para introducir el Dni" Text="{Binding .Dni}" MaxLength="{Binding .LongitudMaxima}" GotFocus="QuitarLetra" TextChanged="CheckDni" KeyDown="EventoTecladoCalcularLetra"  Width="200" Grid.Column="1" Grid.Row="0" Margin="230,0,0,0"/>
+        <Button x:Name="BotonDni" ToolTip="Al pulsar en este botón se calculará la letra del Dni" Content="Calcular letra" Grid.Column="2" Grid.Row="0" Margin="20,0,0,0" Width="100" Click="EventoClickCalcularLetra" IsEnabled="{Binding .EstadoBoton}"/>
     </Grid>
 </UserControl>

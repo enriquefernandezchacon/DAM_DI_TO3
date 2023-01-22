@@ -10,51 +10,72 @@ using System.Windows;
 namespace DI03_Tarea_Fernandez_Chacon_EnriqueOctavio.Vistas.Clientes
 {
     /// <summary>
-    /// Lógica de interacción para WindowAnadirCliente.xaml
+    /// LÓGICA DE INTERACCIÓN PARA WINDOWANADIRCLIENTE.XAML
     /// </summary>
     public partial class WindowAnadirCliente : Window
     {
+        /// <summary>
+        /// LISTA CON LOS ERRORES GENERAR POR EL FORMULARIO
+        /// </summary>
         private List<string> errores = new List<string>();
         public WindowAnadirCliente()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// METODO LLAMADO AL CLICAR EN EL BOTÓN PARA AÑADIR UN CLIENTE
+        /// </summary>
+        /// <param name="sender">ELEMENTO REQUERIDO POR EL EVENTO</param>
+        /// <param name="e">ELEMENTO REQUERIDO POR EL EVENTO</param>
         private void AnadirCliente(object sender, RoutedEventArgs e)
         {
+            //INICIALIZAMOS EL ARRAY DE ERRORES SIEMPRE QUE CLIQUEMOS EN EL BOTÓN PARA NO ACUMULARLOS
             errores = new();
+            //COMPROBAMOS LOS CAMPOS
             ComprobarCampos();
+            //SI HAY ERRORES
             if (errores.Count > 0)
             {
                 MostrarErrores();
-            } else
+            }
+            //SI NO HAY ERRORES
+            else
             {
                 ProcesarPeticion();
             }
         }
 
+        /// <summary>
+        /// MÉTODO PARA GENERAR UN DIALOGO CON LOS ERRORES
+        /// </summary>
         private void MostrarErrores()
         {
+            //CABECERA
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("El formulario presente los siguientes errores:");
             sb.AppendLine();
+            //SE AÑADEN LOS ERRORES
             foreach (var error in errores)
             {
                 sb.AppendLine(string.Concat("- ", error));
             }
+            //PIE Y FINAL
             sb.AppendLine();
             sb.AppendLine("Revise los errores y vuelva a intentarlo");
-
             MessageBox.Show(sb.ToString(), "Errores en el formulario", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
+        /// <summary>
+        /// MÉTODO PARA PORCESAR LA PETICIÓN CUANDO LOS DATOS SON CORRECTOS
+        /// </summary>
         private void ProcesarPeticion()
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("Cliente añadido con éxito.");
             sb.AppendLine();
             sb.AppendLine(string.Concat(Regex.Replace(TextBoxNombre.Text.Trim(), @"\s+", " "), " ", Regex.Replace(TextBoxApellidos.Text.Trim(), @"\s+", " ")));
-            sb.AppendLine(string.Concat("Fecha de nacimiento: ", DatePickerFechaNacimiento.ToString().Substring(0,10)));
+            sb.AppendLine(string.Concat("Fecha de nacimiento: ", DatePickerFechaNacimiento.ToString().Substring(0, 10)));
             sb.AppendLine(string.Concat("Teléfono: ", TextBoxTelefono.Text));
             sb.AppendLine(string.Concat("Email: ", TextBoxMail.Text));
             sb.AppendLine(string.Concat("Dirección: ", TextBoxDireccion.Text));
@@ -65,11 +86,13 @@ namespace DI03_Tarea_Fernandez_Chacon_EnriqueOctavio.Vistas.Clientes
         private void ComprobarCampos()
         {
             // NOMBRE
+            // COMPRUEBO QUE NO ESTE VACÍO
             if (string.IsNullOrEmpty(TextBoxNombre.Text.Trim()))
             {
                 errores.Add("nombre".ErrorVacio());
             }
-            else if (!TextBoxNombre.Text.EsValido()) 
+            //COMPRUEBO QUE SEA VÁLIDO
+            else if (!TextBoxNombre.Text.EsValido())
             {
                 errores.Add("nombre".ErrorFormato());
             }
@@ -84,7 +107,7 @@ namespace DI03_Tarea_Fernandez_Chacon_EnriqueOctavio.Vistas.Clientes
                 errores.Add("apellidos".ErrorFormato());
             }
 
-            //TELEFON
+            //TELEFONO
             if (string.IsNullOrEmpty(TextBoxTelefono.Text.Trim()))
             {
                 errores.Add("telefono".ErrorVacio());
@@ -128,8 +151,12 @@ namespace DI03_Tarea_Fernandez_Chacon_EnriqueOctavio.Vistas.Clientes
             }
         }
 
-        
 
+        /// <summary>
+        /// METODO PARA DETECTAR EL CERRADO DE LA VENTANA Y VOLVER A MOSTRAR LA VENTANA ANTERIOR
+        /// </summary>
+        /// <param name="sender">ELEMENTO REQUERIDO POR EL EVENTO</param>
+        /// <param name="e">ELEMENTO REQUERIDO POR EL EVENTO</param>
         private void Window_Closed(object sender, EventArgs e)
         {
             this.Owner.Show();
